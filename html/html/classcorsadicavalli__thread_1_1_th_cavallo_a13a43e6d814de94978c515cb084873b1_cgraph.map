@@ -1,0 +1,6 @@
+<map id="run" name="run">
+<area shape="rect" id="node2" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#ab3ad7ddf0f14a52ac316686adbced1ae" title="Metodo che restituisce l&#39;attributo schermo della classe. " alt="" coords="113,5,305,47"/>
+<area shape="rect" id="node3" href="$classcorsadicavalli__thread_1_1_schermo.html#a53746ba1083889a3663aadb2bbd5bef3" title="Il metodo permette di aggiungere la stringa passata come parametro in coda all&#39;attributo vettore..." alt="" coords="93,71,324,98"/>
+<area shape="rect" id="node4" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#ab58653cd4b875cbca84e378af4d49385" title="Metodo che incrementa gli step fatti da un cavallo. " alt="" coords="113,123,305,164"/>
+<area shape="rect" id="node5" href="$classcorsadicavalli__thread_1_1_c_cavallo.html#a7706bf75644956c70ff22c1085975fea" title="Metodo che permette di incrementare l&#39;attributo step. " alt="" coords="372,130,616,157"/>
+</map>

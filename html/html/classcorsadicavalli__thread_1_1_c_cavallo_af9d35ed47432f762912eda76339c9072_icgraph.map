@@ -1,0 +1,5 @@
+<map id="getStep" name="getStep">
+<area shape="rect" id="node2" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#a4c378be4c42282c0e2189da78c4f8c2d" title="Metodo che restituisce il numero di step fatti da un cavallo presente nel vettore. " alt="" coords="120,5,312,47"/>
+<area shape="rect" id="node3" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#a2ecd3d8d3c81716a704cbdee9d3248b0" title="Metodo che restituisce un vettore CCavallo contenete i cavalli ordinati in base agli step effettuati ..." alt="" coords="360,5,552,47"/>
+<area shape="rect" id="node4" href="$classcorsadicavalli__thread_1_1main.html#a75988cf84fc6ee7a2ebff36e363021aa" title="corsadicavalli_thread.main.main" alt="" coords="600,13,807,39"/>
+</map>

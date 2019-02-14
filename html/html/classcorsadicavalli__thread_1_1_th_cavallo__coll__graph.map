@@ -1,0 +1,5 @@
+<map id="ThCavallo" name="ThCavallo">
+<area shape="rect" id="node3" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html" title="{VariabiliCondivise\n||+ VariabiliCondivise()\l+ incStep()\l+ getStep()\l+ getClassifica()\l+ getSchermo()\l}" alt="" coords="91,233,234,369"/>
+<area shape="rect" id="node4" href="$classcorsadicavalli__thread_1_1_c_cavallo.html" title="{CCavallo\n|&#45; nome\l&#45; step\l|+ CCavallo()\l+ CCavallo()\l+ CCavallo()\l+ incStep()\l+ getStep()\l+ getNome()\l}" alt="" coords="54,5,149,171"/>
+<area shape="rect" id="node5" href="$classcorsadicavalli__thread_1_1_schermo.html" title="{Schermo\n|&#45; MAXEL\l&#45; numEl\l&#45; schermo\l|+ Schermo()\l+ push()\l+ getPos()\l+ getNumEl()\l}" alt="" coords="173,13,272,163"/>
+</map>

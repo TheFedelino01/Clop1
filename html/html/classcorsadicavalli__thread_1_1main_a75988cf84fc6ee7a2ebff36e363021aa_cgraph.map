@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#ab3ad7ddf0f14a52ac316686adbced1ae" title="Metodo che restituisce l&#39;attributo schermo della classe. " alt="" coords="129,5,321,47"/>
+<area shape="rect" id="node3" href="$classcorsadicavalli__thread_1_1_schermo.html#a12e5237c7ad426fe63b859490ec32a41" title="Il metodo ritorna il valore dell&#39;attributo numEl della classe. " alt="" coords="115,71,335,112"/>
+<area shape="rect" id="node4" href="$classcorsadicavalli__thread_1_1_schermo.html#a0ee54f633b4e35c0d30d38007c42b448" title="Il metodo ritorna il valore dell&#39;oggetto di tipo Stringa presente nel vettore in base alla posizione ..." alt="" coords="104,137,347,163"/>
+<area shape="rect" id="node5" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#a2ecd3d8d3c81716a704cbdee9d3248b0" title="Metodo che restituisce un vettore CCavallo contenete i cavalli ordinati in base agli step effettuati ..." alt="" coords="129,188,321,229"/>
+<area shape="rect" id="node6" href="$classcorsadicavalli__thread_1_1_variabili_condivise.html#a4c378be4c42282c0e2189da78c4f8c2d" title="Metodo che restituisce il numero di step fatti da un cavallo presente nel vettore. " alt="" coords="395,188,587,229"/>
+<area shape="rect" id="node7" href="$classcorsadicavalli__thread_1_1_c_cavallo.html#af9d35ed47432f762912eda76339c9072" title="Metodo che restituisce l&#39;attributo step della classe. " alt="" coords="635,195,880,222"/>
+</map>
