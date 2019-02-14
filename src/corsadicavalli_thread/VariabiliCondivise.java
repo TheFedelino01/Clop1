@@ -62,7 +62,7 @@ public class VariabiliCondivise {
     @author  Saccani Federico
     @version 1.0
     */
-    public void incStep(String versoDelCavallo) {
+    public synchronized void incStep(String versoDelCavallo) {
         switch (versoDelCavallo) {
             case "Clop1":
                 stepCavallo[0].incStep();
@@ -139,8 +139,8 @@ public class VariabiliCondivise {
     @author  Saccani Federico
     @version 1.0
     */
-    public Schermo getSchermo(){
-        return schermo;
+    public synchronized void pushSchermo(String str){
+        schermo.push(str);
     }
     
     
