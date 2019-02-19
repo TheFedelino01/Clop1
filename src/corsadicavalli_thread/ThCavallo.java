@@ -88,14 +88,11 @@ public class ThCavallo extends Thread{
     {
         try{
             Random rn = new Random();
-            while(true){
-                ptrVariabili.getSemSchermo().Wait();
-                    ptrVariabili.getSchermo().push(verso);
-                ptrVariabili.getSemSchermo().Signal();
+            while(ptrVariabili.getContinua()){
                 
-                ptrVariabili.getSemStep().Wait();
-                    ptrVariabili.incStep(verso);
-                ptrVariabili.getSemStep().Signal();
+                ptrVariabili.pushSchermo(verso);
+                
+                ptrVariabili.incStep(verso);
                 
                 if(delay){
                     Thread.sleep(rn.nextInt(2000));
@@ -104,12 +101,9 @@ public class ThCavallo extends Thread{
                     Thread.yield();
                 }
                 
-                if (Thread.currentThread().isInterrupted()){
-                    return;
-                }
             }
         }catch(Exception e){
-            System.out.println("errore: "+e.toString());
+            System.out.println("Errore: "+e.toString());
         }
             
     }

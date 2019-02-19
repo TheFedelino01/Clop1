@@ -26,18 +26,12 @@ public class ThVisualizza extends Thread{
         boolean continua=true;
         int i=0;
         
-        while(continua){
+        while(ptrVariabili.getContinua()){
             i=0;
-            ptrVariabili.getSemSchermo().Wait();
-                Schermo schermo = ptrVariabili.getSchermo();
-            ptrVariabili.getSemSchermo().Signal();
+            Schermo schermo = ptrVariabili.getSchermo();
                 
             while(i<schermo.getNumEl() && continua==true){
-                
-                ptrVariabili.getSemSchermo().Wait();
-                    schermo = ptrVariabili.getSchermo();
-                ptrVariabili.getSemSchermo().Signal();
-                
+
                 System.out.println(schermo.getPos(i));
                 
                 if(Thread.currentThread().isInterrupted()){

@@ -32,9 +32,10 @@ public class VariabiliCondivise {
      */
     private CCavallo stepCavallo[]=new CCavallo[5];
 
-    private Semaforo semSchermo = new Semaforo(1);
-    private Semaforo semStep = new Semaforo(1);
+//    private Semaforo semSchermo = new Semaforo(1);
+//    private Semaforo semStep = new Semaforo(1);
     
+    private boolean continua=true;
     /**
     @brief Costruttore della classe
 
@@ -93,7 +94,7 @@ public class VariabiliCondivise {
     @author  Saccani Federico
     @version 1.0
     */
-    public int getStep(int numDiCavallo) {
+    public synchronized int getStep(int numDiCavallo) {
         if (numDiCavallo>=0 && numDiCavallo<=4)
             return stepCavallo[numDiCavallo-1].getStep();
         else
@@ -111,7 +112,7 @@ public class VariabiliCondivise {
     @author  Saccani Federico
     @version 1.0
     */
-    public CCavallo[] getClassifica(){
+    public synchronized CCavallo[] getClassifica(){
         int j=0;
         boolean ordinato=false;
         while(ordinato==false){
@@ -131,6 +132,18 @@ public class VariabiliCondivise {
         return stepCavallo;
     }
     
+    public synchronized boolean getContinua(){
+        return continua;
+    }
+    
+    public synchronized void fermaProcessi(){
+        continua=false;
+    }
+    
+    public synchronized Schermo getSchermo(){
+        return schermo;
+    }
+    
     
     /**
     @brief Metodo che restituisce l'attributo schermo della classe
@@ -144,15 +157,11 @@ public class VariabiliCondivise {
     }
     
     
-    public Semaforo getSemSchermo(){
-        return semSchermo;
-    }
-    
-    public Semaforo getSemStep(){
-        return semStep;
-    }
-    
-    
-
-    
+//    public Semaforo getSemSchermo(){
+//        return semSchermo;
+//    }
+//    
+//    public Semaforo getSemStep(){
+//        return semStep;
+//    }  
 }
