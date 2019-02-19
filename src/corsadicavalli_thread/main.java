@@ -73,11 +73,14 @@ public class main {
         
         System.out.println("");
         
-        cav1.interrupt();
-        cav2.interrupt();
-        cav3.interrupt();
-        cav4.interrupt();
-        cav5.interrupt();
+        
+        DatiCondivisi.fermaProcessi();
+        
+//        cav1.interrupt();
+//        cav2.interrupt();
+//        cav3.interrupt();
+//        cav4.interrupt();
+//        cav5.interrupt();
         try{
             cav1.join();
             cav2.join();
