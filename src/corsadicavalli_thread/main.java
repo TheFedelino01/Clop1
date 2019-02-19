@@ -45,6 +45,7 @@ public class main {
         ThCavallo cav4 = new ThCavallo("Clop4",DELAY,YIELD,DatiCondivisi);
         ThCavallo cav5 = new ThCavallo("Clop5",DELAY,YIELD,DatiCondivisi);
         
+        
         System.out.println("Che cavallo vincera'?");
         String cavVincente = sc.next();
         
@@ -96,8 +97,12 @@ public class main {
             System.out.println("\nVINTO!");
         }else{
             System.out.println("\nPERSO! Il cavallo vincente era: ");
-            System.out.println(v[0].getNome());
+            System.out.println(v[0].getNome()+"\n");
         }
+        
+        for(int i=0; i<5;i++)
+            System.out.println(v[i].getNome()+": "+v[i].getStep()+" step");
+        
         
         System.out.println("Terminato!");
         

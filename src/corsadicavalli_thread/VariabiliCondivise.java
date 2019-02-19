@@ -70,6 +70,7 @@ public class VariabiliCondivise {
                 break;
             case "Clop2":
                 stepCavallo[1].incStep();
+                break;
             case "Clop3":
                 stepCavallo[2].incStep();
                 break;
