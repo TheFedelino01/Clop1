@@ -1,0 +1,60 @@
+@startuml
+actor Utente
+
+
+participant Main
+entity  Dati
+participant thVisualizza
+participant DIN
+participant DON
+participant DAN
+
+
+Utente -> Main ++ : Start
+Main -> Dati**:new
+Main -> thVisualizza**:new
+Main -> DIN**:new
+Main -> DON**:new
+Main -> DAN**:new
+
+
+Main -> thVisualizza ++: start
+Main -> DIN ++: start
+Main -> DON ++: start
+Main -> DAN ++: start
+
+DIN->Dati:wait()
+DIN->Dati:incDin("DIN")
+DIN->Dati:signal()
+
+DON->Dati:wait()
+DON->Dati:inc("DON")
+DON->Dati:signal()
+
+DAN->Dati:wait()
+DAN->Dati:inc("DAN")
+DAN->Dati:signal()
+
+
+thVisualizza->Dati:wait()
+thVisualizza->Dati:getElement(i)
+thVisualizza->Dati:signal()
+
+Utente -> Main: Click
+
+
+DIN->Main--:return
+DON->Main--:return
+DAN->Main--:return
+note over Main : join DIN
+note over Main : join DAN
+note over Main : join DON
+
+thVisualizza->Main--:return
+note over Main : join thVisualizza
+
+Main -> Dati:getMaggiore()
+Utente -> Main: Dice se maggiore Din o Don o Dan
+
+Main -> Utente:Risultato
+@enduml

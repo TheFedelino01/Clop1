@@ -1,0 +1,68 @@
+@startuml
+title Progetto Clop - Saccani
+
+actor User
+participant main
+entity Dati
+
+User -> main ++: click
+main->Dati**:new()
+main -> User : Che cavallo vincera'?
+User -> main : send the answer
+
+main ->Visualizza **: new()
+main ->Th1 **: new()
+main ->Th2 **: new()
+main ->Th3 **: new()
+main ->Th4 **: new()
+main ->Th5 **: new()
+
+main ->Visualizza ++: start()
+main ->Th1 ++: start()
+main ->Th2 ++: start()
+main ->Th3 ++: start()
+main ->Th4 ++: start()
+main ->Th5 ++: start()
+
+Th1 -> Dati : getSemSchermo().Wait()
+Th1 -> Dati : getSchermo().push(verso)
+Th1 -> Dati : getSemSchermo().Signal()
+Th1 -> Dati : getSemStep().Wait()
+Th1 -> Dati : incStep(verso)
+Th1 -> Dati : getSemStep().Signal()
+
+Th1 -> Dati : getSemSchermo().Wait()
+Th2 -> Dati : getSchermo().push(verso)
+Th2 -> Dati : getSemSchermo().Signal()
+
+Th2 -> Dati : getSemStep().Wait()
+Th2 -> Dati : incStep(verso)
+Th2 -> Dati : getSemStep().Signal()
+
+Visualizza -> Dati : getSemSchermo().Wait()
+Visualizza -> Dati : getSchermo();
+Visualizza -> Dati : getSemSchermo().Signal()
+
+
+
+User -> main : Input
+
+
+Th1 -> main --: Return
+Th2 -> main --: Return
+Th3 -> main --: Return
+Th4 -> main --: Return
+Th5 -> main --: Return
+Visualizza -> main --: Return
+note over main : join Th1
+note over main : join Th2
+note over main : join Th3
+note over main : join Th4
+note over main : join Th5
+note over main : join thVisualizza
+
+main->Dati:getClassifica()
+main->User: dice se winner or loser
+main->User: Terminato!
+
+@enduml
