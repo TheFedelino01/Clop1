@@ -36,6 +36,9 @@ public class VariabiliCondivise {
 //    private Semaforo semStep = new Semaforo(1);
     
     private boolean continua=true;
+    
+    private Semaphore waitCompletato= new Semaphore(0); 
+    
     /**
     @brief Costruttore della classe
 
@@ -145,6 +148,9 @@ public class VariabiliCondivise {
         return schermo;
     }
     
+    public synchronized Semaphore getWaitSemaforo(){
+        return waitCompletato;
+    }
     
     /**
     @brief Metodo che restituisce l'attributo schermo della classe

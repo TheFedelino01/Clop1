@@ -30,13 +30,10 @@ public class ThVisualizza extends Thread{
             i=0;
             Schermo schermo = ptrVariabili.getSchermo();
                 
-            while(i<schermo.getNumEl() && continua==true){
+            while(i<schermo.getNumEl() && continua==true && ptrVariabili.getContinua()){
 
                 System.out.println(schermo.getPos(i));
                 
-                if(Thread.currentThread().isInterrupted()){
-                    continua=false;
-                }
                 i++;
             }      
             

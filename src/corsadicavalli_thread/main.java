@@ -61,21 +61,22 @@ public class main {
         
         
         //Se scrivo qualcosa, blocco tutto
+//        try{
+//        while(!(System.in.available()>0)){
+//            Thread.sleep(100);
+//        }
+//        }catch(InterruptedException e){}
+//        catch(IOException a){}
+
+        //System.out.println("");
+        
+        //Aspetto che uno finisce
         try{
-        while(!(System.in.available()>0)){
-            Thread.sleep(100);
-        }
-        }catch(InterruptedException e){}
-        catch(IOException a){}
+        DatiCondivisi.getWaitSemaforo().acquire();
+        System.out.println("Aspetto che finiscono!");
+        }catch(Exception e){System.out.println("Errore nel wait!");}
         
-        
-        visualizza.interrupt();
-        
-        
-        System.out.println("");
-        
-        
-        DatiCondivisi.fermaProcessi();
+        //DatiCondivisi.fermaProcessi();
         
 //        cav1.interrupt();
 //        cav2.interrupt();

@@ -86,12 +86,19 @@ public class ThCavallo extends Thread{
     @Override
     public void run() 
     {
+        int i=0;
+        
         try{
             Random rn = new Random();
-            while(ptrVariabili.getContinua()){
+            while(ptrVariabili.getContinua() && i<100){
+                
+                if(i==99){
+                    //Dico che ho finito al main e blocco tutti i processi
+                    ptrVariabili.getWaitSemaforo().release();
+                    ptrVariabili.fermaProcessi();
+                }
                 
                 ptrVariabili.pushSchermo(verso);
-                
                 ptrVariabili.incStep(verso);
                 
                 if(delay){
@@ -100,8 +107,10 @@ public class ThCavallo extends Thread{
                 if(yield){
                     Thread.yield();
                 }
-                
+                i++;
             }
+            
+            
         }catch(Exception e){
             System.out.println("Errore: "+e.toString());
         }
